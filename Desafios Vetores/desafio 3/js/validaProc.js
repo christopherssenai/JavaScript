@@ -18,7 +18,7 @@ function validaProc() {
         numeroMultipla[i]=numero[i]*multipla;
         console.log(numero[i]+" X "+multipla+" = "+numeroMultipla[i]);
     }
-    
+    return false;
 
 }
 

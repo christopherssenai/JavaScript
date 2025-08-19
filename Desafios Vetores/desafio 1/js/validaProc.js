@@ -1,30 +1,26 @@
-function validaProc() {
-    let i=0;
-    let j=0;
-    let mediaBimestre=[0, 0];
-    let notaAluno=[];
-    let mediaNota=0;
-
-    for (i = 0; i < 2; i++){
-        console.log("");
-        console.log("Notas dos alunos no "+(i+1)+"º Bimestre: ");
-        console.log("");
-
-        for (j = 0; j < 5; j++){
-            notaAluno[j] = parseFloat(prompt("Nota do "+(j+1)+"º aluno: "));
-            console.log("Nota: "+notaAluno[j]);
-            mediaBimestre[i] += notaAluno[j];
-        }
-
-        console.log("Média do "+(i+1)+"º bimestre: " + (mediaBimestre[i] / 5));
+function validaProc()
+{ 
+    let i;
+    let nota1=[];
+    let nota2=[];
+    let media=[];
+    
+    for(i = 0; i<5; i++)
+    {
+        nota1[i]=parseFloat(prompt("Digite a primeira nota do "+(i+1)+" aluno: " ));
+        console.log("Primeira nota do "+(i+1)+" aluno: "+nota1[i])
+        nota2[i]=parseFloat(prompt("Digite a segunda nota do "+(i+1)+" aluno: " ));
+        console.log("Segunda nota do "+(i+1)+" aluno: "+nota2[i])
+        console.log("")
+        media[i] = (nota1[i] + nota2[i]) / 2
     }
 
-    for (i = 0; i < 2; i++){
-        mediaNota += mediaBimestre[i];
-    }
+    console.log("\n")
 
-    console.log("");
-    console.log("A média total dos alunos é " + (mediaNota / (2*5))); 
+    for(i = 0; i<5; i++)
+    {
+        console.log("Media do "+i+ " aluno = "+media[i])
+    }
+    
+    return false;
 }
-
-
