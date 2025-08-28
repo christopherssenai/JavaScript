@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Editor para Atividades</title>
+<style>
+    body { font-family: Arial, sans-serif; background: #f4f4f4; padding: 20px; }
+    .atividade { margin-bottom: 30px; background: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    textarea { width: 100%; height: 150px; font-family: monospace; margin-bottom: 10px; }
+    iframe { width: 100%; height: 200px; border: 1px solid #ccc; }
+    button { padding: 8px 15px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    button:hover { background: #0056b3; }
+    h3 { margin-bottom: 10px; }
+</style>
+</head>
+<body>
+
+<h1>Atividades de HTML/JS</h1>
+
+<!-- Atividade 1 -->
+<div class="atividade">
+    <h3>Atividade 1: Exibir Olá Mundo</h3>
+    <textarea id="codigo1"><h1>Olá Mundo!</h1></textarea>
+    <button onclick="executar('codigo1', 'preview1')">Executar</button>
+    <iframe id="preview1"></iframe>
+</div>
+
+<!-- Atividade 2 -->
+<div class="atividade">
+    <h3>Atividade 2: Alterar Cor</h3>
+    <textarea id="codigo2"><div style="color:red;">Texto em vermelho</div></textarea>
+    <button onclick="executar('codigo2', 'preview2')">Executar</button>
+    <iframe id="preview2"></iframe>
+</div>
+
+<!-- Atividade 3 -->
+<div class="atividade">
+    <h3>Atividade 3: Código com JavaScript</h3>
+    <textarea id="codigo3"><button onclick="alert('Olá!')">Clique aqui</button></textarea>
+    <button onclick="executar('codigo3', 'preview3')">Executar</button>
+    <iframe id="preview3"></iframe>
+</div>
+
+<script>
+function executar(textareaId, iframeId) {
+    const codigo = document.getElementById(textareaId).value;
+    const iframe = document.getElementById(iframeId).contentWindow.document;
+    iframe.open();
+    iframe.write(codigo);
+    iframe.close();
+}
+</script>
+
+</body>
+</html>
