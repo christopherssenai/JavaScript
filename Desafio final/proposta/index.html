@@ -1,23 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página inicial</title>
-    <link rel="stylesheet" type="text/css" href="css/config.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio</title>
+  <link rel="stylesheet" href="css/index.css">
+  <style>
+    .fundo{
+    width: 100%;
+    height: 100vh;
+    background: url(img/capadefundo1.jpeg) no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    opacity: 0.95;
+    }
+  </style>
 </head>
 <body>
-
-    <header>
-       <p>Menu</p>
-    </header>
-    <main>
-
-
-        <section class="conteudo">
-            <h2>Estruturas de controle e de dados</h2>
-            <p>As estruturas de controle e de dados servem a propósitos distintos na programação: venha descobrir suas particularidades!</p>
-          </section>
-    </main>
+    
+  <div class="fundo">
+    <div class="menu">
+        <a href="estruturasRepeticao.html">Estruturas de repetição</a>
+        <a href="info.html">Informação </a> 
+        <a href="estruturasDados.html">Estruturas de Dados</a>
+    </div>
+    <div class="conteudo">
+      <h1>Estruturas de controle e<br>de dados</h1>
+      <p>As estruturas de controle e de dados servem a propósitos distintos na programação: venha descobrir suas particularidades!</p>
+    </div>
+  </div>
 </body>
 </html>
